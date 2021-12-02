@@ -20,7 +20,7 @@ spec:
     spec:
       containers:              
       - name: db-deployment
-        image: harbor.dev.afsmtddso.com/dbrown-harbor-project/db@sha256:3798f682a6b4972d5bad3a99b10c30dd9f17054807b068dd1c7bf1b1f2dbbbdd
+        image: harbor.dev.afsmtddso.com/dbrown-harbor-project/db@sha256:8a642f568cda41f1c72cbeb7445b0f84713d46555bda7d3ebf2db480a55ab146
         ports:
         - containerPort: 5432
         envFrom:
