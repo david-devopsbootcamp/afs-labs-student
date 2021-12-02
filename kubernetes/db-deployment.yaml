@@ -1,28 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-deployment
+  name: db-deployment
   namespace: dbrown
   labels:
-    app: app
+    app: db
 spec:
   replicas: 1
   strategy:
     type: Recreate
-  minReadySeconds: 20
+  minReadySeconds: 20  
   selector:
     matchLabels:
-      app: app
+      app: db
   template:
     metadata:
       labels:
-        app: app
+        app: db
     spec:
       containers:              
-      - name: app-deployment
-        image: harbor.dev.afsmtddso.com/dbrown-harbor-project/app@sha256:96fd988dcd87b1bdb66625eade98347122003df4a6bf697b425b7922c1788cbf
+      - name: db-deployment
+        image: harbor.dev.afsmtddso.com/dbrown-harbor-project/db@sha256:3798f682a6b4972d5bad3a99b10c30dd9f17054807b068dd1c7bf1b1f2dbbbdd
         ports:
-        - containerPort: 5000
+        - containerPort: 5432
         envFrom:
         - secretRef:
             name: db-secret          
