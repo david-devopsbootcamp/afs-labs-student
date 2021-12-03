@@ -4,7 +4,7 @@
 
 
 -- NEW COMMENT - testing db pipeline pt 5
--- New comment for testing
+-- New comment for testing 2
 -- Dumped from database version 9.5.4
 -- Dumped by pg_dump version 9.5.4
 
